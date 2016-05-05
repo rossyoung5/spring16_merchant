@@ -1,9 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<div>
   <%= image_tag @product.avatar.url (:medium) %>
-  <%= image_tag @product.avatar.url (:thumb) %>
-</p>
+</div>
 
 <p>
   <strong>Name:</strong>
@@ -12,7 +11,7 @@
 
 <p>
   <strong>Price:</strong>
-  <%= @product.price %>
+  <%= number_to_currency @product.price %>
 </p>
 
 <p>
@@ -27,12 +26,12 @@
 
 <p>
   <strong>Brand:</strong>
-  <%= @product.brand %>
+  <%= @product.brand.name %>
 </p>
 
 <p>
   <strong>Category:</strong>
-  <%= @product.category %>
+  <%= @product.category.name %>
 </p>
 
 <%= link_to 'Edit', edit_admin_product_path(@product) %> |
