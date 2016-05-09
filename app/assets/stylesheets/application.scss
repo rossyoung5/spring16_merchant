@@ -16,3 +16,30 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.navbar {
+  border-radius: 0px;
+  border: 0px white solid;
+}
+
+.navbar-inverse {
+  background-color: #004080;
+}
+
+.navbar-inverse .navbar-nav > li {
+  a {
+      color: #fff;
+    }
+  a:hover {
+      color: #9d9d9d;
+    }
+}
+
+.dropdown-menu {
+  background-color: #004080;
+}
