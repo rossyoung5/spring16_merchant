@@ -1,6 +1,6 @@
 class LineItemsController < ApplicationController
-include CurrentCart
-before_action :set_cart
+  include CurrentCart
+  before_action :set_cart
 
   def create
     product = Product.find(params[:product_id])

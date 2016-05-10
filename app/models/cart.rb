@@ -1,16 +1,7 @@
 class Cart < ActiveRecord::Base
   has_many :line_items, dependent: :destroy
 
-  def destroy
-    if @cart.destroy
-      session[:cart_id] = nil
-      flash[:notice] = "Cart was successfully deleted."
-      redirect_to shop_path
-    else
-      flash.now[:alert] = "Could not delete cart."
-      redirect_to edit_cart_path
-    end
-  end
+
 
   def subtotal
     #SQL version of summing, which is faster than Ruby
