@@ -12,15 +12,17 @@
       <div class="col-sm-4">
         <div class="panel panel-default">
           <div class="panel-body">
-            <%= image_tag product.avatar.url (:medium), class: "img-responsive" %>
+            <div align="center">
+              <%= image_tag product.avatar.url (:medium), class: "img-responsive" %>
+            </div>
             <span class="pull-right">
               <h5><%= number_to_currency product.price %></h5>
             </span>
             <h5><%= product.name %></h5>
+            <%= button_to 'Add to Cart', line_items_path(product_id: product), class: "btn btn-success btn-sm pull-right" %>
             <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal_<%= product.id %>">
               + Quick Info
             </button>
-            <%= button_to 'Add to Cart', line_items_path(product_id: product), class: "btn btn-success btn-sm" %>
           </div>
         </div>
       </div>
